@@ -55,16 +55,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link" href="#first"><img src="images/peigne.png" alt="logo" style="width:30px;">First</a>
+            <a class="nav-link" href="#first"><img src="images/repairing-service.png" alt="logo" style="width:30px;">Services</a>
             </li> 
             <li class="nav-item">
-            <a class="nav-link" href="#second"><img src="images/tiger.png" alt="logo" style="width:30px;">Second</a>
+            <a class="nav-link" href="#second"><img src="images/automobile-with-wrench.png" alt="logo" style="width:30px;">Mechanics</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#third"><img src="" alt="logo" style="width:30px">Third</a>
+            <a class="nav-link" href="#third"><img src="images/appointment.png" alt="logo" style="width:30px">Book Appointment</a>
             </li>   
             <li class="nav-item">
-            <a class="nav-link" href="#fourth"><img src="images/tiger.png" alt="logo" style="width:30px;">Fourth</a>
+            <a class="nav-link" href="#fourth"><img src="images/letter.png" alt="logo" style="width:30px;">Contact</a>
             </li>
         </ul>
         </div>  
@@ -95,7 +95,7 @@
 
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
+    <div class="container" id="first">
         <h2>Service description</h2>
         <p>Here is a list of services offered</p>            
         <table class="table table-primary table-hover">
@@ -170,7 +170,7 @@
     <!-- A different approach would be to make the whole staff information collapsible -->
     <!-- Here a block button (taking the full width) opens/closes the collapsible -->
     <!-- Here a single card is used, but card columns could be used -->
-    <div class="container">
+    <div class="container" id="second">
         <h2>More information</h2>
         <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
         <div id="mechanics" class="collapse">
@@ -212,7 +212,7 @@
     <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
     <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
     <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <div class="container">
+    <div class="container" id="third">
         <!--
         <div class="container-md p-3 my-3 border bg-warning text-white">
             <h1>Erwind's and friends bike shop</h1>
@@ -221,7 +221,7 @@
         -->
         <div id="accordion">
             <h2>Book an Appointment</h2>
-            <div class="card" id="first">
+            <div class="card">
                 <div class="card-header">
                     <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
                 </div>
@@ -237,7 +237,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" id="second">
+            <div class="card">
                 <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
                 </div>
@@ -255,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" id="third">
+            <div class="card">
                 <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseService">Choose a mechanic</a>
                 </div>
@@ -271,7 +271,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" id="fourth">
+            <div class="card">
                 <div class="card-header">
                     <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
                 </div>
@@ -296,7 +296,7 @@
     <br>
 
 
-    <div class="container mb-4">
+    <div class="container mb-4" id="fourth">
             <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
         <!-- Modals are useful for additional information or questions -->
         <!-- Here the modal is used for a little survey -->
