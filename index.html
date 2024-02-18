@@ -16,12 +16,18 @@
 
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap Datepicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js"></script>
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="availability.js"></script>
 </head>
 
 
@@ -247,15 +253,24 @@
                 </div>
                 <div id="collapseDate" class="collapse" data-parent="#accordion">
                     <div class="card-body">
-                        <p>What date?</p>
+                        <p>What date and time?</p>
                         <!-- Bootstrap has various input components. Some examples are given here: -->
                         <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
                         <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
+                            <div class="col-4">
+                        <!--    <div class="col-10">
                                 <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                            </div> -->
+                                <div class="md-form md-outline datepicker">
+                                    <input placeholder="Select date" type="text" id="date" class="form-control">
+                                </div>  
                             </div>
-                        </div>
+                            <div class="col-4">
+                                <div class="input-group bootstrap-timepicker timepicker">
+                                    <input id="timepicker" type="text" class="form-control">
+                                </div>
+                            </div>     
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -290,7 +305,7 @@
                             <label for="num" class="form-label">Phone Number</label>
                             <input type="num" id="num" class="form-control">
                             <br>
-                            <button>Submit</button>
+                            <button class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -298,7 +313,7 @@
         </div>
     </div>
     <br>
-    
+
     <!-- Form for payment -->
     <div class="container" id="fourth">
         <h2>Payment</h2>
@@ -349,5 +364,6 @@
         </div>   
     </div>
 
+    
 </body>
 </html>
