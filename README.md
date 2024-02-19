@@ -11,3 +11,4 @@ Payment Icon: https://www.flaticon.com/free-icons/payment, Payment icons created
 Contact Icon: https://www.flaticon.com/free-icons/contact, Contact icons created by Icongeek26 - Flaticon
 
 Border color changes mildly inspired by w3schools guide: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2
+Tooltips inspired by bootstrap documents: https://getbootstrap.com/docs/4.0/components/tooltips/
