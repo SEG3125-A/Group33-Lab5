@@ -13,11 +13,20 @@ input[type=text]:hover {
  border-color: blue;
 }
 
+input[type=name]:hover {
+ border: 2px solid transparent;
+}
+
+input[type=name]:hover {
+ border-style: solid;
+ border-color: blue;
+}
+
 .nav-link{
-border: 2px dotted transparent;
+border: 2px solid transparent;
 }
 
 .nav-link:hover {
-border-style: dotted;
+border-style: solid;
 border-color: blue;
 }
