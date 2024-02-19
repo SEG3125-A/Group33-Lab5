@@ -22,6 +22,24 @@ input[type=name]:hover {
  border-color: blue;
 }
 
+input[type=email]:hover {
+ border: 2px solid transparent;
+}
+
+input[type=email]:hover {
+ border-style: solid;
+ border-color: blue;
+}
+
+input[type=num]:hover {
+ border: 2px solid transparent;
+}
+
+input[type=num]:hover {
+ border-style: solid;
+ border-color: blue;
+}
+
 .nav-link{
 border: 2px solid transparent;
 }
