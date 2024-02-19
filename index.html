@@ -28,6 +28,7 @@
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <script src="availability.js"></script>
+    <script src="payment.js"></script>
 </head>
 
 
@@ -296,7 +297,7 @@
                 </div>
                 <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
                     <div class="card-body">
-                        <form>
+                        <form id="appointmentForm">
                             <p>Please enter your information so we can contact you:</p>
                             <label for="name" class="form-label">Name</label>
                             <input type="name" id="name" class="form-control">
@@ -304,8 +305,6 @@
                             <input type="email" id="email" class="form-control">
                             <label for="num" class="form-label">Phone Number</label>
                             <input type="num" id="num" class="form-control">
-                            <br>
-                            <button class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -317,7 +316,50 @@
     <!-- Form for payment -->
     <div class="container" id="fourth">
         <h2>Payment</h2>
-
+        <form id="paymentForm">
+            <p style="color: red;">*Please fill all Appointment fields to access payment section.</p>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ccNumber">Credit Card Number</label>
+                    <input type="text" class="form-control" id="ccNumber" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nameOnCard">Name on Card</label>
+                    <input type="text" class="form-control" id="nameOnCard" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="expiryMonth">Expiry Month</label>
+                    <select id="expiryMonth" class="form-control" required>
+                        <option value="">Choose...</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="expiryYear">Expiry Year</label>
+                    <select id="expiryYear" class="form-control" required>
+                        <option value="">Choose...</option>
+                    </select>
+                </div>
+            </div>
+            <button id="submitPaymentBtn" type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
 
