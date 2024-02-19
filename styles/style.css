@@ -13,14 +13,6 @@ input[type=text]:hover {
  border-color: blue;
 }
 
-input[type=name]:hover {
- border-color: blue;
-}
-
-input[type=email]:hover {
- border-color: blue;
-}
-
-input[type=num]:hover {
- border-color: blue;
+.nav-item px-5:hover{
+border-color: blue;
 }
