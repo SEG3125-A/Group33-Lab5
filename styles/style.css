@@ -13,6 +13,7 @@ input[type=text]:hover {
  border-color: blue;
 }
 
-.nav-item px-5:hover{
+.nav-link:hover {
+border-style: solid;
 border-color: blue;
 }
