@@ -13,26 +13,14 @@ input[type=text]:hover {
  border-color: blue;
 }
 
-input[type=name] {
- border: 2px solid transparent;
-}
-
 input[type=name]:hover {
  border-style: solid;
  border-color: blue;
 }
 
-input[type=email] {
- border: 2px solid transparent;
-}
-
 input[type=email]:hover {
  border-style: solid;
  border-color: blue;
-}
-
-input[type=num] {
- border: 2px solid transparent;
 }
 
 input[type=num]:hover {
