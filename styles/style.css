@@ -13,7 +13,7 @@ input[type=text]:hover {
  border-color: blue;
 }
 
-input[type=name]:hover {
+input[type=name] {
  border: 2px solid transparent;
 }
 
@@ -22,7 +22,7 @@ input[type=name]:hover {
  border-color: blue;
 }
 
-input[type=email]:hover {
+input[type=email] {
  border: 2px solid transparent;
 }
 
@@ -31,7 +31,7 @@ input[type=email]:hover {
  border-color: blue;
 }
 
-input[type=num]:hover {
+input[type=num] {
  border: 2px solid transparent;
 }
 
