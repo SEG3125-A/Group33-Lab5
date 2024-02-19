@@ -56,4 +56,78 @@ $(document).ready(function() {
         togglePaymentSection();
     });
 
+    function validateFormValues() {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var num = $('#num').val();
+        var date = $('#date').val();
+        var incorrectFields = [];
+    
+        if (!/^[a-zA-Z]+$/.test(name)) {
+            incorrectFields.push("Name");
+        }
+    
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            incorrectFields.push("Email");
+        }
+    
+        if (isNaN(num) || num.trim() === '') {
+            incorrectFields.push("Phone Number");
+        }
+        if (!checkAppointmentDetails()) {
+            incorrectFields.push("Service/Mechanic")
+        }
+        var datePattern = /^\d{4}-\d{2}-\d{2}$/;
+        if (!datePattern.test(date)) {
+            incorrectFields.push("Date");
+        }
+
+        return incorrectFields;
+    }
+
+    function validateCreditCard() {
+        var ccNumber = $('#ccNumber').val();
+        var cvv = $('#cvv').val();
+        var nameOnCard = $('#nameOnCard').val();
+        var expiryMonth = $('#expiryMonth').val();
+        var expiryYear = $('#expiryYear').val();
+        var incorrectCreditCardFields = [];
+        
+        ccNumber = ccNumber.replace(/\s/g, '');
+
+        if (!/^\d+$/.test(ccNumber) || (ccNumber.length < 13 || ccNumber.length > 16)) {
+            incorrectCreditCardFields.push("Credit Card Number");
+        }
+        if (isNaN(cvv) || cvv.trim() === '' || (cvv.trim().length !== 3 && cvv.trim().length !== 4)) {
+            incorrectCreditCardFields.push("CVV");
+        }
+        if (!/^[a-zA-Z]+$/.test(nameOnCard)) {
+            incorrectCreditCardFields.push("Name On Card");
+        }
+        if (expiryMonth === '') {
+            incorrectCreditCardFields.push("Expiry Month");
+        }
+        if (expiryYear === '') {
+            incorrectCreditCardFields.push("Expiry Year");
+        }
+
+        return incorrectCreditCardFields;
+    }
+    
+    $("#submitPaymentBtn").click(function(event) {
+        event.preventDefault();
+        var incorrectCreditCardFields = validateCreditCard()
+        var incorrectFields = validateFormValues()
+
+        var full = $.merge(incorrectCreditCardFields, incorrectFields);
+
+        if (full.length == 0){
+            alert("Appointment booked. Thank you!")
+            $("#paymentForm").trigger("reset");
+            $("#appointmentForm").trigger("reset");
+        } else {
+            alert("Please correct the following field(s):\n- " + full.join("\n- "));
+        }
+    });
 });
